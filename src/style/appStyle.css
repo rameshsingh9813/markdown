@@ -1,0 +1,13 @@
+ .container {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    /* align-items: center; center vertically */
+    height: 100vh; /* set height of container */
+    background-color: #87B5B5;
+    margin:-8px -8px auto -8px;
+  }
+  
+  .center {
+    margin: auto; /* center horizontally */
+  }
+  

@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
+// import './style/appStyle.css';
+// import Editor from "./component/Editor";
+// import Previewer from "./component/Previewer";
+
+// function App() {
+//   return (
+//     <div className="container">
+//     <div className="center">
+//        <Editor/>
+//        <Previewer/>
+//     </div>
+//     </div>
+    
+//   );
+// }
+
+// export default App;
+
+
+
+
+
+import React from 'react';
+import Markdown from './component/Markdown';
 
 function App() {
+  const markdownText = `~hello~ 
+   This is a sub-heading...   **bold**  or _bold_
+  `;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Markdown text={markdownText} />
     </div>
   );
 }
