@@ -1,39 +1,27 @@
-// import React from "react";
-// import './style/appStyle.css';
-// import Editor from "./component/Editor";
-// import Previewer from "./component/Previewer";
+import React, { useState } from 'react';
+import Editor from './component/Editor';
+import Previewer from './component/Previewer';
+import './style/appStyle.css';
 
-// function App() {
-//   return (
-//     <div className="container">
-//     <div className="center">
-//        <Editor/>
-//        <Previewer/>
-//     </div>
-//     </div>
-    
-//   );
-// }
+const App = () => {
+  const [text, setText] = useState('');
 
-// export default App;
-
-
-
-
-
-import React from 'react';
-import Markdown from './component/Markdown';
-
-function App() {
-  const markdownText = `~hello~ 
-   This is a sub-heading...   **bold**  or _bold_
-  `;
+  const handleChange = (event) => {
+    setText(event.target.value);
+  };
 
   return (
-    <div>
-      <Markdown text={markdownText} />
+    <div className="app-container">
+      <div className="editor-container">
+        <Editor text={text} handleChange={handleChange} />
+      </div>
+      <br/>
+      <br/>
+      <div className="previewer-container">
+        <Previewer text={text} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

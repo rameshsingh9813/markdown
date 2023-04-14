@@ -1,23 +1,13 @@
-import React from 'react'
+import React from 'react';
 import '../style/editorStyle.css'
-import Markdown from './component/Markdown';
 
-const Editor = () => {
-  const markdownText = `~hello~ 
-  This is a sub-heading...   **bold**  or _bold_
- `;
-
+const Editor = ({ text, handleChange }) => {
   return (
-    <div className='editorwrap'>
-        <div className='toolbar'>
-            <h2>Editor</h2>
-            {/* <i class="fa fa-arrows-alt"></i> */}
-        </div>
-        <textarea id="message" name="message" className='editortextarea'>
-        <Markdown text={markdownText} />
-        </textarea>
+    <div className="editor-container">
+      <h2 className='heading2'>Editor</h2>
+      <textarea className="editor-textarea" value={text} onChange={handleChange} />
     </div>
-  )
-}
+  );
+};
 
-export default Editor
+export default Editor;

@@ -1,0 +1,19 @@
+.previewer-container {
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .editor-textarea{
+    width: 100%; /* Set the width of the textarea to 100% of the parent */
+    height: 218px;
+    border: none;
+    outline: none;
+    padding: 0px;
+  }
+  
+.heading2{
+    background-color:#4AA3A3;
+    padding:5px;
+    margin:-2px -2px -2PX -2px;
+    border: 1px solid black;
+  }

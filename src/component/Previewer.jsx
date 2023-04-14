@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import {parse} from 'marked';
+import '../style/previewerStyle.css';
 
-const Previewer = () => {
+const Previewer = ({ text }) => {
+  const html = parse(text);
+
   return (
-    <div>
-        <h1>hello i am previewer</h1>
+    <div className="previewer-container">
+      <h2 className='heading2'>Previewer</h2>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
-  )
-}
+  );
+};
 
-export default Previewer
+export default Previewer;
